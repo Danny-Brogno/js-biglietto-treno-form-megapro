@@ -20,15 +20,17 @@
             </div>
 
             <div class="">
-              <label for="number">Km da percorrere</label>
-              <input id="number" type= "number" name="distance" value="">
+              <label for="distance">Km da percorrere</label>
+              <input id="distance" type= "number" name="distance" value="">
             </div>
 
             <div class="">
-              <select class="" name="eta">
-                <option value="0">minorenne</option>
-                <option value="1">maggiorenne</option>
-                <option value="2">over 65</option>
+              <label for="eta">Fascia di età</label>
+              <select id="eta" class="" name="eta">
+                <option selected value="">Seleziona un'opzione</option>
+                <option value="1">minorenne</option>
+                <option value="2">maggiorenne</option>
+                <option value="3">over 65</option>
               </select>
             </div>
 
@@ -42,6 +44,40 @@
 
       <div class="row">
         <h2>Il tuo biglietto</h2>
+
+        <div>
+          <p>Dettaglio passeggeri</p>
+          <table>
+
+            <thead>
+              <tr>
+                <th>Nome passeggero</th>
+                <th>Offerta</th>
+                <th>Carrozza</th>
+                <th>Codice CP</th>
+                <th>Costo biglietto</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+              <tr>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+                <td id=""></td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+
+              </tr>
+            </tfoot>
+
+          </table>
+        </div>
       </div>
 
     </div>
@@ -51,6 +87,22 @@
 
   <!---__________JavaScript__________-->
   <script type="text/javascript">
+
+    var generaBtn = document.getElementById('genera');
+    var annullaBtn = document.getElementById('annulla');
+
+    generaBtn.addEventListener('click', function(){
+      // console.log('Ho cliccato sul pulsante genera');
+      var name = document.getElementById('name').value;
+      // console.log(name);
+      var distanza = document.getElementById('distance').value;
+      var eta = document.getElementById('eta').value;
+      console.log(name, distanza, eta);
+    });
+
+    annullaBtn.addEventListener('click', function(){
+      console.log('ho cliccato sul pulsante annulla');
+    });
 
   </script>
   <!---__________END JavaScript__________-->
